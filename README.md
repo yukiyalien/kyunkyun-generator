@@ -12,3 +12,7 @@
 ```
 
 Let's Kyun-Kyun! → https://kyun.yukiya.me/
+
+# See also
+
+- https://github.com/nzws/kyunkyun-extension by @nzws
