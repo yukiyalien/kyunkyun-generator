@@ -15,6 +15,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <script src="./script.js"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
         @import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap');
@@ -46,6 +48,10 @@
             font-family: 'Ubuntu', sans-serif;
             text-align: center;
             background-color: #f2f2f2;
+        }
+
+        .modal {
+            text-align: left;
         }
 
         header {
@@ -242,21 +248,19 @@
         </script>
 
         <div class="btns">
-            <p><a class="sharebutton mastodon"
-                    href="http://best-friends.chat/share?text=ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️%0A%23インターネット帯域の無駄%0Ahttps://kyun.yukiya.me/"
+            <p><a class="sharebutton mastodon kyun-link"
+                    href="http://best-friends.chat/share?text={kyun}"
                     style="background-color: #2b90d9; color: #ffffff;"
                     onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><i
                         class="fab fa-mastodon fa-fw fa-lg"></i><span style="font-size: 0.8em;">Toot on</span> Best Friends</a></p>
 
-            <p><a class="sharebutton mastodon"
-                    href="http://mastportal.info/intent?text=ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️%0A%23インターネット帯域の無駄%0Ahttps://kyun.yukiya.me/"
-                    style="background-color: #2b90d9; color: #ffffff;"
-                    onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><i
-                        class="fab fa-mastodon fa-fw fa-lg"></i><span style="font-size: 0.8em;">Toot on</span> Mastodon</a></p>
+            <p><button class="sharebutton mastodon" style="background-color: #2b90d9; color: #ffffff;" data-toggle="modal" data-target="#share-modal">
+                <i class="fab fa-mastodon fa-fw fa-lg"></i><span style="font-size: 0.8em;">Toot on</span> Mastodon
+            </button></p>
 
-            <p><a href="https://twitter.com/intent/tweet?text=ゆ❤️き❤️や❤️きゅ〜っきゅっきゅｷｭｷｭｷｭｷｭｷｭｷｭCueCueCueCueキュンゆきやッキュｷｭｷｭﾝ❤️キュンッ❤️キュッキュッキュッ❤️ｷｭｷｭﾝ❤️%0A%23インターネット帯域の無駄%0Ahttps://kyun.yukiya.me/"
+            <p><a href="https://twitter.com/intent/tweet?text={kyun}"
                     onclick="window.open(this.href, '', 'width=500,height=400'); return false;"
-                    class="sharebutton twitter">
+                    class="sharebutton twitter kyun-link">
                     <i class="fab fa-twitter fa-fw fa-lg"></i><span style="font-size: 0.8em;">Tweet on</span> Twitter
                 </a></p>
         </div>
@@ -294,7 +298,23 @@
 
     </footer>
 
-
+    <div class="modal fade" id="share-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Mastodon / Misskeyで投稿</h4>
+            </div>
+            <div class="modal-body">
+                <label for="server-domain">サーバードメインを入力...</label>
+                <input type="text" class="form-control" id="server-domain" placeholder="mastodon.social">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-block" onclick="openShare()">開く</button>
+            </div>
+          </div>
+        </div>
+    </div>
 
 
 
