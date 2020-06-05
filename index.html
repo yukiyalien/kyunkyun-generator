@@ -90,7 +90,7 @@
         p {
             color: #f2463d;
             font-size: 18px;
-            font-family: 'Sawarabi Gothic' sans-serif;
+            font-family: 'Sawarabi Gothic'sans-serif;
         }
 
         p.discription {
@@ -125,7 +125,7 @@
         }
 
         .sharebutton {
-            width: 220px;
+            width: 300px;
             display: block;
             padding: 0.3em;
             text-align: right;
@@ -136,7 +136,6 @@
             transition: 0.4s;
             position: relative;
             margin-top: 10px;
-            background-color: #d3c6b2;
             margin: 0 auto;
         }
 
@@ -159,14 +158,28 @@
             border-color: #2b90d9;
         }
 
+        .sharebutton.bf {
+            background-color: #EE5449;
+            border-color: #EE5449;
+        }
+
         .sharebutton:hover {
             border-color: #2e3350;
             text-decoration: none;
         }
 
         .hell {
-            margin-top: 30px;
+            margin-top: 15px;
+            margin-bottom: 0px;
             color: #1da1f2
+        }
+
+        .hell.twitter {
+            color: #1da1f2
+        }
+
+        .hell.mastodon {
+            color: #2b90d9;
         }
 
         a.hell {
@@ -176,6 +189,10 @@
             background-size: 200% auto;
             transition: .3s;
             text-decoration: none;
+        }
+
+        a.hell>i {
+            margin: 0 5px;
         }
 
         a.hell:hover {
@@ -248,30 +265,37 @@
         </script>
 
         <div class="btns">
-            <p><a class="sharebutton mastodon kyun-link"
-                    href="http://best-friends.chat/share?text={kyun}"
-                    style="background-color: #2b90d9; color: #ffffff;"
-                    onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><i
-                        class="fab fa-mastodon fa-fw fa-lg"></i><span style="font-size: 0.8em;">Toot on</span> Best Friends</a></p>
 
-            <p><button class="sharebutton mastodon" style="background-color: #2b90d9; color: #ffffff;" data-toggle="modal" data-target="#share-modal">
-                <i class="fab fa-mastodon fa-fw fa-lg"></i><span style="font-size: 0.8em;">Toot on</span> Mastodon
-            </button></p>
+            <p><button class="sharebutton mastodon" style="background-color: #2b90d9; color: #ffffff;"
+                    data-toggle="modal" data-target="#share-modal">
+                    <i class="fab fa-mastodon fa-fw fa-lg"></i>Mastodon / Misskey<span style="font-size: 0.8em;">
+                        で投稿</span>
+                </button></p>
+
+            <p><a class="sharebutton bf kyun-link" href="http://best-friends.chat/share?text={kyun}"
+                    style="background-color: #EE5449; color: #FFFFFF;"
+                    onclick="window.open(this.href, '', 'width=500,height=400'); return false;"><i
+                        class="fab fa-mastodon fa-fw fa-lg"></i>Best Friends<span style="font-size: 0.8em;">
+                        でトゥート</span></a></p>
 
             <p><a href="https://twitter.com/intent/tweet?text={kyun}"
                     onclick="window.open(this.href, '', 'width=500,height=400'); return false;"
                     class="sharebutton twitter kyun-link">
-                    <i class="fab fa-twitter fa-fw fa-lg"></i><span style="font-size: 0.8em;">Tweet on</span> Twitter
+                    <i class="fab fa-twitter fa-fw fa-lg"></i>Twitter<span style="font-size: 0.8em;"> でツイート</span>
                 </a></p>
         </div>
         <div class="caution">
             <p class="caution">※節度を持ってお使いください。</p>
             <p class="caution">※作者は練習にこのサイトを作っただけであり、このミームを認めたり称賛したりする意図はありません。</p>
         </div>
-        <p class="hell"><a
+        <p class="hell twitter"><a
                 href="https://twitter.com/search?q=%E3%82%86%E2%9D%A4%EF%B8%8F%E3%81%8D%E2%9D%A4%EF%B8%8F%E3%82%84%E2%9D%A4%EF%B8%8F%E3%81%8D%E3%82%85%E3%80%9C%E3%81%A3%E3%81%8D%E3%82%85%E3%81%A3%E3%81%8D%E3%82%85%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%ADCueCueCueCue%E3%82%AD%E3%83%A5%E3%83%B3%E3%82%86%E3%81%8D%E3%82%84%E3%83%83%E3%82%AD%E3%83%A5%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BE%9D%E2%9D%A4%EF%B8%8F%E3%82%AD%E3%83%A5%E3%83%B3%E3%83%83%E2%9D%A4%EF%B8%8F%E3%82%AD%E3%83%A5%E3%83%83%E3%82%AD%E3%83%A5%E3%83%83%E3%82%AD%E3%83%A5%E3%83%83%E2%9D%A4%EF%B8%8F%EF%BD%B7%EF%BD%AD%EF%BD%B7%EF%BD%AD%EF%BE%9D%E2%9D%A4%EF%B8%8F&src=typed_query&f=live"
                 target="_blank" class="hell"><i class="fab fa-twitter"></i>地獄を見に行く<i
-                    class="fas fa-chevron-circle-right nicodic"></i></a></p>
+                    class="fas fa-chevron-circle-right"></i></a></p>
+        <p class="hell mastodon"><a
+                href="https://best-friends.chat/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E5%B8%AF%E5%9F%9F%E3%81%AE%E7%84%A1%E9%A7%84"
+                target="_blank" class="hell"><i class="fab fa-mastodon"></i>地獄を見に行く<i
+                    class="fas fa-chevron-circle-right"></i></a></p>
         <div class="faq">
             <h1>FAQ</h1>
             <p>Q. ゆきキュンってなんですか？</p>
@@ -293,26 +317,28 @@
 
     </div>
     <footer>
-        <p class="copyright">&copy;2020 yukiyalien | <a href="https://github.com/yukiyalien/kyunkyun-generator" target="_blank">Source Code</a></p>
+        <p class="copyright">&copy;2020 yukiyalien | <a href="https://github.com/yukiyalien/kyunkyun-generator"
+                target="_blank">Source Code</a></p>
 
 
     </footer>
 
     <div class="modal fade" id="share-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Mastodon / Misskeyで投稿</h4>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Mastodon / Misskeyで投稿</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="server-domain">サーバードメインを入力...</label>
+                    <input type="text" class="form-control" id="server-domain" placeholder="mastodon.social">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-block" onclick="openShare()">開く</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <label for="server-domain">サーバードメインを入力...</label>
-                <input type="text" class="form-control" id="server-domain" placeholder="mastodon.social">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary btn-block" onclick="openShare()">開く</button>
-            </div>
-          </div>
         </div>
     </div>
 
